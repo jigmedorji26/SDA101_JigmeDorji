@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Student Profile</title>
+  <style>
+    body {font-family: Arial, sans-serif; background:#f4f8fb; margin:0; padding:0; line-height:1.6;}
+    .container {max-width:700px; margin:20px auto; background:#fff; padding:20px; border-radius:10px;}
+    h1,h2 {text-align:center; color:#2c3e50;}
+    a {color:#16a085; text-decoration:none;} a:hover{color:#1abc9c;}
+    nav {display:flex; justify-content:center; background:#2c3e50; padding:10px; border-radius:6px; margin-bottom:20px;}
+    nav a {color:#fff; margin:0 10px; padding:6px 10px;} nav a:hover{background:#34495e; border-radius:4px;}
+    .profile-photo {display:block; margin:0 auto 20px; width:120px; height:120px; border-radius:50%; object-fit:cover;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Student Profile</h1>
+    <nav><a href="#about">About</a><a href="#edu">Education</a><a href="#hobbies">Hobbies</a><a href="#contact">Contact</a></nav>
+    <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+    <h2 id="about">About Me</h2><p>I am <strong>Jigme dorji</strong>, studying <em>SWE</em>.</p>
+    <h2 id="edu">Education</h2><p>Student at <strong>CST</strong>, interested in web development.</p>
+    <h2 id="hobbies">Hobbies</h2><ul><li>Reading</li><li>Web Design</li><li>Basketball</li></ul>
+    <h2 id="contact">Contact</h2><p>Email: <a href="mailto:Jigme@example.com">Jigme@example.com</a></p>
+    </div>
+</body>
+</html>

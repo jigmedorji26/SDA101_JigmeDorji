@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jigme Dorji — Web Developer Portfolio</title>
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --text: #1a1a1a;
+      --muted: #555;
+      --card-bg: #fff;
+      --accent1: #ff6b6b;
+      --accent2: #5f27cd;
+      --accent3: #1dd1a1;
+      --radius: 16px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2), var(--accent3));
+      background-size: 200% 200%;
+      color: var(--text);
+      animation: gradient 12s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(30px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes cardPop {
+      0% {transform: scale(0.95); opacity: 0;}
+      100% {transform: scale(1); opacity: 1;}
+    }
+
+    header {
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+      color: #fff;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    header p {
+      margin: 4px 0 20px;
+      color: #e0e0e0;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 90%;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: var(--accent2);
+    }
+
+    .hero {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--accent2), var(--accent1));
+      color: #fff;
+      padding: 60px 20px;
+      border-radius: var(--radius);
+      text-align: center;
+      animation: cardPop 1s ease forwards;
+    }
+
+    .hero img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      border: 4px solid #fff;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill {
+      padding: 8px 14px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, var(--accent2), var(--accent3));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .projects .project {
+      background: #f8f9fb;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 10px;
+      border: 1px solid #eee;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .projects .project:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      resize: none;
+    }
+
+    button {
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      border: none;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: opacity 0.2s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      margin: 30px 0;
+      color: #fff;
+      font-size: 14px;
+      opacity: 0;
+      animation: fadeInUp 1.5s ease forwards;
+      animation-delay: 1.2s;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jigme Dorji</h1>
+    <p>Web Developer • Creative Designer</p>
+  </header>
+
+  <div class="container">
+
+    <section class="hero">
+      <img src="/Final assignment/2c52152e-e3cb-474f-b88b-558a1975d2cf.jpg" alt="Jigme Dorji">
+      <h2>Hello, I'm Jigme</h2>
+      <p>I’m a passionate web developer who enjoys building colorful, functional, and user-friendly websites. I love blending creativity with technology to craft stunning digital experiences.</p>
+      <button>View My Work</button>
+    </section>
+
+    <section class="card about">
+      <h2>About Me</h2>
+      <p>I'm Jigme Dorji, a frontend web developer based in Bhutan. I specialize in creating visually appealing interfaces using HTML, Python, and Figma. My goal is to make web applications both beautiful and efficient.</p>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Figma</div>
+      </div>
+    </section>
+
+    <section class="card projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio designed to showcase projects and contact details. Built with HTML and CSS.</p>
+      </div>
+      <div class="project">
+        <h3>Weather App</h3>
+        <p>A colorful weather application that displays real-time weather data using APIs and JavaScript.</p>
+      </div>
+      <div class="project">
+        <h3>Music Player</h3>
+        <p>An interactive online music player with playlist management and visual sound effects.</p>
+      </div>
+    </section>
+
+    <section class="card contact">
+      <h2>Contact Me</h2>
+      <p>Have a project or idea in mind? Let’s connect!</p>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Jigme Dorji — Made with Creativity
+  </footer>
+</body>
+</html>
